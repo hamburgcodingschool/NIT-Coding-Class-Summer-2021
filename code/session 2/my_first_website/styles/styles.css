@@ -15,3 +15,7 @@ h1 {
   font-weight: normal;
   text-shadow: 10px 10px 10px red;
 }
+
+.active {
+  color: green;
+}
