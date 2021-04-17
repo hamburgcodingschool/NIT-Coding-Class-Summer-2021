@@ -1,0 +1,17 @@
+a {
+  color: darkgoldenrod;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+h1 {
+  color: blue;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  font-weight: normal;
+  text-shadow: 10px 10px 10px red;
+}
