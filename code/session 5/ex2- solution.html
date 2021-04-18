@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #mainContainer {
+            background-color: yellow;
+
+            width: 700px;
+            border: solid 5px red;
+
+            border-radius: 20px;
+            padding: 20px 200px 20px 20px;
+            margin: 40px auto 0;
+
+            position: relative;
+        }
+
+        .linkContainer {
+            position: absolute;
+            background-color: pink;
+
+            width: 300px;
+            height: 200px;
+
+            border: solid 5px turquoise;
+            border-radius: 10px;
+
+            opacity: 0.95;
+        }
+
+        .linkContainer:nth-child(1) {
+            right: -150px;
+            top: 20px;
+        }
+
+        .linkContainer:nth-child(2) {
+            right: -150px;
+            top: 270px;
+        }
+
+        .linkContainer ul {
+            list-style-type: none;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .linkContainer a {
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 33px;
+            color: steelblue;
+        }
+
+        .linkContainer a:hover {
+            text-decoration: underline;
+        }
+
+        .centerContainer img {
+            float: left;
+            padding: 0 20px 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div class="linkContainer">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Something different</a></li>
+            </ul>
+        </div>
+        <div class="linkContainer">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+        </div>
+        <div class="centerContainer">
+            <h1>My Awesome Website!</h1>
+            <img src="https://www.fillmurray.com/200/300" />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                cursus tortor neque, vitae viverra eros rhoncus eget.
+                Pellentesque fringilla ipsum in sem cursus semper. Aenean eu
+                aliquet nisi. Suspendisse nec odio egestas, vulputate dolor
+                in, elementum lorem. Quisque vulputate auctor volutpat. In
+                sit amet sapien sollicitudin, mattis arcu eget, sodales
+                lacus. Duis in mauris nibh. Sed a dignissim enim, vel
+                feugiat ipsum. Vivamus in rhoncus mauris, ut aliquet leo.
+                Maecenas vel condimentum urna, nec suscipit neque. Quisque
+                cursus nulla ut magna pharetra semper. Nam consectetur
+                cursus metus, nec vehicula tortor lobortis et. Curabitur
+                lobortis auctor justo eget tristique. Aenean porta arcu at
+                nisi porta scelerisque. Mauris nec suscipit arcu. Nulla a
+                dolor mi. Nam placerat sollicitudin urna nec fringilla.
+            </p>
+            <p>
+                Aliquam mattis, sem hendrerit elementum finibus, massa odio
+                venenatis massa, non dignissim tortor turpis sed nisi.
+                Nullam aliquet urna vitae consectetur fringilla. Nulla non
+                tortor nunc. Nulla a dolor mi. Nam placerat sollicitudin
+                urna nec fringilla. Proin porta faucibus magna, quis
+                ultricies mauris auctor vel. In nec nunc suscipit,
+                condimentum velit in, consectetur tortor. Aenean fermentum
+                fermentum sapien. Donec eu lacus eu tellus pretium
+                imperdiet.
+            </p>
+            <p>
+                Aliquam mattis, sem hendrerit elementum finibus, massa odio
+                venenatis massa, non dignissim tortor turpis sed nisi.
+                Nullam aliquet urna vitae consectetur fringilla. Nulla non
+                tortor nunc. Nulla a dolor mi. Nam placerat sollicitudin
+                urna nec fringilla. Proin porta faucibus magna, quis
+                ultricies mauris auctor vel. In nec nunc suscipit,
+                condimentum velit in, consectetur tortor. Aenean fermentum
+                fermentum sapien. Donec eu lacus eu tellus pretium
+                imperdiet.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
