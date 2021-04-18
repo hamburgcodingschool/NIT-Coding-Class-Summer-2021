@@ -12,29 +12,24 @@
             height: 200px;
             background-color: red;
 
-            margin: 0 auto;
-            margin: 0;
-            /* all sides */
-            margin: 0 0;
-            /* 1 - top and bottom 2 - left and right */
-            margin: 0 0 0;
-            /* 1 - top 2 - left and right 3 - bottom */
-            margin: 0 0 0 0;
-            /* top, right, bottom, left */
         }
 
         #div2 {
-            width: 500px;
-            height: 200px;
+            width: 200px;
+            height: 400px;
             background-color: green;
 
-            position: absolute;
+            position: relative;
+            top: 30px;
+            left: 440px;
 
-            left: 50%;
-            margin-left: -250px;
+            margin: 0 auto;
+        }
 
-            top: 50%;
-            margin-top: -100px;
+        #div3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
         }
     </style>
 </head>
@@ -42,6 +37,7 @@
 <body>
     <div id="div1"></div>
     <div id="div2"></div>
+    <div id="div3"></div>
 </body>
 
 </html>
