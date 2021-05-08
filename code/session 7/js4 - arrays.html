@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // ARRAYS ALLOW YOU TO STORE MULTIPLE VALUES IN AN INDEXED FASHION
+
+        let someNumbers = [4, 7, 12, 87, 34, 90, 15, 6];
+
+        // document.write(someNumbers[0] + "<br>");
+        // document.write(someNumbers[1] + "<br>");
+        // document.write(someNumbers[2] + "<br>");
+        // document.write(someNumbers[3] + "<br>");
+        // document.write(someNumbers[4] + "<br>");
+        // document.write(someNumbers[5] + "<br>");
+        // document.write(someNumbers[6] + "<br>");
+        // document.write(someNumbers[7] + "<br>");
+
+
+        // Print all the numbers in an array, line by line,
+        // add an ` ! ` next to the even numbers
+
+        for (let i = 0; i < someNumbers.length; i++) {
+
+            document.write(someNumbers[i]);
+
+            if (someNumbers[i] % 2 == 0) {
+                document.write("!");
+            }
+
+            document.write("<br>");
+        }
+    </script>
+
+</body>
+
+</html>

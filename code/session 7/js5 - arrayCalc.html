@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Using the structures we've learnt so far, let's figure out:
+
+        // 1 - What is the sum of the numbers in the array
+        // 2 - Average of the numbers in the array
+        // 3 - Which is the highest number
+        // 4 - Which is the lowest number
+
+
+        let numbers = [23, 12, 34, 43, 12, 34, 10];
+
+        let total = 0;
+        // let highest = -Infinity;
+        // let lowest = Infinity;
+        let highest = numbers[0];
+        let lowest = numbers[0];
+
+        for (let i = 0; i < numbers.length; i++) {
+            // total = total + numbers[i];
+            total += numbers[i];
+
+            if (numbers[i] > highest) {
+                highest = numbers[i];
+            }
+
+            if (numbers[i] < lowest) {
+                lowest = numbers[i];
+            }
+        }
+
+        let average = total / numbers.length;
+
+        document.write(`Sum: ${total}<br>`);
+        document.write(`Avg: ${average}<br>`);
+        document.write(`Max: ${highest}<br>`);
+        document.write(`Min: ${lowest}<br>`);
+    </script>
+</body>
+
+</html>

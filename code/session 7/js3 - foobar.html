@@ -14,6 +14,40 @@
         // IF THE NUMBER IS A MULTIPLE OF 3 PRINT `FOO` INSTEAD
         // IF THE NUMBER IS A MULTIPLE OF 5 PRINT `BAR` INSTEAD
         // IF THE NUMBER IS A MULTIPLE OF 3 AND 5 PRINT `FOOBAR`
+
+        // for (let i = 1; i <= 100; i++) {
+
+        //     // if (i % 3 == 0 && i % 5 == 0) {
+        //     if (i % 15 == 0) {
+        //         document.write("foobar");
+        //     } else if (i % 5 == 0) {
+        //         document.write("bar");
+        //     } else if (i % 3 == 0) {
+        //         document.write("foo");
+        //     } else {
+        //         document.write(i);
+        //     }
+
+        //     document.write("<br>");
+        // }
+
+
+        for (let i = 1; i <= 100; i++) {
+
+            let printValue = "";
+
+            if (i % 3 == 0) {
+                printValue += "foo";
+            }
+            if (i % 5 == 0) {
+                printValue += "bar";
+            }
+            if (printValue == "") {
+                printValue = i;
+            }
+
+            document.write(`${printValue}<br>`);
+        }
     </script>
 </body>
 
