@@ -10,18 +10,49 @@
 
 <body>
     <script>
-        let a = 56;
-        let b = 56;
+        let a = 34;
+        let b = 42;
+        let c = 54;
 
         // print the highest of the 2 numbers
 
-        if (a > b) {
-            document.write(a);
-        } else {
-            document.write(b);
-        }
+        // if (a > b) {
+        //     document.write(a);
+        // } else {
+        //     document.write(b);
+        // }
 
         // print the highest of 3 numbers
+
+        // solution 1
+
+        // if (a > b) {
+        //     if (a > c) {
+        //         document.write(a);
+        //     } else {
+        //         document.write(c);
+        //     }
+        // } else {
+        //     if (b > c) {
+        //         document.write(b);
+        //     } else {
+        //         document.write(c);
+        //     }
+        // }
+
+        // solution 2
+
+        let max = a;
+
+        if (b > max) {
+            max = b;
+        }
+
+        if (c > max) {
+            max = c;
+        }
+
+        document.write(max);
     </script>
 </body>
 
