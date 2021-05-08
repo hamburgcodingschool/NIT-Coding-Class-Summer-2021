@@ -16,12 +16,37 @@
         // 4 - function that returns the area of a cricle
 
         function rectPerimeter(sideA, sideB) {
-            let result = 0; // calculate the perimeter
+            let result = (sideA + sideB) * 2;
 
             return result;
         }
 
-        document.write(rectPerimeter(3, 2));
+        function rectArea(sideA, sideB) {
+            return sideA * sideB;
+        }
+
+        function circleCircumference(radius) {
+            return 2 * Math.PI * radius;
+        }
+
+        function circleArea(radius) {
+            // return Math.PI * Math.pow(radius, 2);
+            return Math.PI * radius * radius;
+        }
+
+        function squareArea(side) {
+
+            let result = rectArea(side, side);
+
+            return result;
+
+        }
+
+        function squarePerimeter(side) {
+            return rectPerimeter(side, side);
+        }
+
+        document.write(squareArea(3));
     </script>
 </body>
 

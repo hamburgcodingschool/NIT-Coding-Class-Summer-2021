@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">0</div>
+    <button id="buttonUp">Go UP!</button>
+    <button id="buttonDown">Go DOWN!</button>
+
+    <script>
+        // COUNTER
+        // everytime you click the button, increase a number inside the DIV
+        // to show how many times the button was clicked
+
+        let div1 = document.getElementById("div1");
+        let buttonUp = document.getElementById("buttonUp");
+        let buttonDown = document.getElementById("buttonDown");
+
+        let counter = 0;
+
+        function goUp() {
+            counter++;
+            div1.innerHTML = counter;
+        }
+
+        function goDown() {
+            counter--;
+            div1.innerHTML = counter;
+        }
+
+        buttonUp.addEventListener("click", goUp);
+        buttonDown.addEventListener("click", goDown);
+    </script>
+</body>
+
+</html>
