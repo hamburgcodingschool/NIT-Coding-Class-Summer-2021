@@ -52,6 +52,7 @@
         let galleryInnerContent = document.getElementById("galleryInnerContent");
 
         let counter = 0;
+        checkButtons();
 
         function updateGalleryPosition() {
             let newMargin = -200 * counter;
@@ -62,24 +63,30 @@
             galleryInnerContent.style.marginLeft = `${newMargin}px`;
         }
 
-        btnNext.addEventListener("click", function () {
-            btnPrev.disabled = false;
-            counter++;
-            if (counter >= 7) {
-                btnNext.disabled = true;
+        function checkButtons() {
+            if (counter == 0) {
+                btnPrev.disabled = true;
+            } else {
+                btnPrev.disabled = false;
             }
 
+            if (counter == 7) {
+                btnNext.disabled = true;
+            } else {
+                btnNext.disabled = false;
+            }
+        }
+
+        btnNext.addEventListener("click", function () {
+            counter++;
             updateGalleryPosition();
+            checkButtons();
         });
 
         btnPrev.addEventListener("click", function () {
-            btnNext.disabled = false;
             counter--;
-            if (counter <= 0) {
-                btnPrev.disabled = true;
-            }
-
             updateGalleryPosition();
+            checkButtons();
         });
     </script>
 </body>
