@@ -35,14 +35,13 @@
     </div>
 
     <script>
-        let inputName = document.getElementById("inputName");
+        let inputA = document.getElementById("inputA");
+        let inputB = document.getElementById("inputB");
         let buttonGo = document.getElementById("buttonGo");
-        let divGreeting = document.getElementById("divGreeting");
+        let divResult = document.getElementById("divResult");
 
         buttonGo.addEventListener("click", function () {
-            let name = inputName.value;
 
-            divGreeting.innerHTML = `Hello ${name}!`;
         });
     </script>
 </body>
