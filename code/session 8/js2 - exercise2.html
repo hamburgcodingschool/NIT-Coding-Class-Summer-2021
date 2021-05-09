@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">0</div>
+    <button id="btnPrevColor">Previous Color!</button>
+    <button id="btnNextColor">Next Color!</button>
+
+    <script>
+        // WHEN CLICKING THE BUTTON THE COLORD SHOULD CHANGE
+        // FROM RED TO GREEN TO BLUE BACK TO RED
+
+        let div1 = document.getElementById("div1");
+        let btnPrevColor = document.getElementById("btnPrevColor");
+        let btnNextColor = document.getElementById("btnNextColor");
+
+        let counter = 0;
+
+        let colors = ['red', 'green', 'blue', 'gray'];
+
+        function nextColor() {
+            counter++;
+            if (counter >= colors.length) {
+                counter = 0;
+            }
+            div1.innerHTML = counter;
+            div1.style.backgroundColor = colors[counter];
+        }
+
+        function prevColor() {
+            counter--;
+            if (counter < 0) {
+                counter = colors.length - 1;
+            }
+            div1.innerHTML = counter;
+            div1.style.backgroundColor = colors[counter];
+        }
+
+        btnNextColor.addEventListener("click", nextColor);
+        btnPrevColor.addEventListener("click", prevColor);
+    </script>
+</body>
+
+</html>

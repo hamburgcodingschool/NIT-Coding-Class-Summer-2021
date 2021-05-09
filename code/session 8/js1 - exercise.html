@@ -18,8 +18,28 @@
 <body>
 
     <div id="div1"></div>
-    <button id="buttonUp">Change Color!</button>
+    <button id="btnChangeColor">Change Color!</button>
 
+    <script>
+        // WHEN CLICKING THE BUTTON THE COLORD SHOULD CHANGE
+        // FROM RED TO GREEN TO BLUE BACK TO RED
+
+        let div1 = document.getElementById("div1");
+        let btnChangeColor = document.getElementById("btnChangeColor");
+
+        function changeColor() {
+            if (div1.style.backgroundColor == "red") {
+                div1.style.backgroundColor = "green";
+            } else if (div1.style.backgroundColor == "green") {
+                div1.style.backgroundColor = "blue";
+            } else if (div1.style.backgroundColor == "blue") {
+                div1.style.backgroundColor = "red";
+            }
+        }
+
+        div1.style.backgroundColor = "red";
+        btnChangeColor.addEventListener("click", changeColor);
+    </script>
 </body>
 
 </html>
