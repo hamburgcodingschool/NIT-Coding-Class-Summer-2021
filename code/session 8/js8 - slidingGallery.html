@@ -51,9 +51,17 @@
         let btnPrev = document.getElementById("btnPrev");
         let galleryInnerContent = document.getElementById("galleryInnerContent");
 
+        let counter = 0;
 
         btnNext.addEventListener("click", function () {
-            galleryInnerContent.style.marginLeft = "-400px";
+            counter++;
+
+            let newMargin = -200 * counter;
+
+            console.log("Counter: ", counter);
+            console.log("Margin: ", newMargin);
+
+            galleryInnerContent.style.marginLeft = `${newMargin}px`;
         });
 
         btnPrev.addEventListener("click", function () {
