@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="img1" src="images/1.jpg" height="300">
+    <br>
+    <button id="btnPrevImage">Previous Image</button>
+    <button id="btnNextImage">Next Image</button>
+
+    <script>
+        let img1 = document.getElementById("img1");
+        let btnNextImage = document.getElementById("btnNextImage");
+        let btnPrevImage = document.getElementById("btnPrevImage");
+
+        let images = [
+            "images/1.jpg",
+            "images/2.jpg",
+            "images/3.jpg",
+            "images/4.jpg",
+            "images/5.jpg",
+            "images/6.jpg",
+            "images/7.jpg",
+            "images/8.jpg",
+        ]
+
+        let counter = 0;
+
+        function nextImage() {
+
+            counter++;
+            if (counter >= images.length) {
+                counter = 0;
+            }
+
+            img1.src = images[counter];
+        }
+
+        function prevImage() {
+
+            counter--;
+            if (counter < 0) {
+                counter = images.length - 1;
+            }
+
+            img1.src = images[counter];
+        }
+
+        btnNextImage.addEventListener("click", nextImage);
+        btnPrevImage.addEventListener("click", prevImage);
+    </script>
+</body>
+
+</html>
