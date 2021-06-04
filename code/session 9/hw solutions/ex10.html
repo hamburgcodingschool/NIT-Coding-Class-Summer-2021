@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = [1, 3, 5, 7, 9, 11, 13, 15];
+
+
+        document.write(x[2]);
+        document.write("<br>");
+
+        let name = "Helder";
+
+        for (let i = 0; i < name.length; i++) {
+            document.write(i);
+            document.write(name[i] + " ");
+        }
+
+        document.write("<br>");
+
+        for (let i = name.length - 1; i >= 0; i--) {
+            // document.write(i);
+            document.write(name[i]);
+        }
+
+        document.write("<br>");
+        document.write(`${x} <br> `);
+        document.write(`${x.reverse()} <br> `);
+
+
+        let reversedName = name.split("").reverse().join("");
+        document.write(reversedName);
+
+
+        // // STRING SPLIT OR EXPLODE
+        // let sentence = "John, 22, London";
+        // document.write(sentence);
+
+        // document.write("<br>");
+
+        // let words = sentence.split("");
+        // document.write(words[2]);
+    </script>
+</body>
+
+</html>

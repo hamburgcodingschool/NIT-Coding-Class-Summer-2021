@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 5;
+        let numbers = [4, 7, 25, 34, 52, 56, 34, 54, 53, 55, 10, 12, 1, 20];
+
+        // SOLUTION 1 - MY AWESOME CODE
+
+        // let itExists = false;
+
+        // for (let i = 0; i < numbers.length; i++) {
+
+        //     if (n == numbers[i]) {
+        //         itExists = true;
+        //         break;
+        //     }
+        // }
+
+        // document.write(itExists);
+
+
+
+
+
+
+        // SOLUTION 2 - MY AWESOME CODE IN A FUNCTION
+
+        // let answer = exists(n, numbers);
+        // document.write(answer);
+
+        // function exists(needle, haystack) {
+
+        //     let itExists = false;
+
+        //     for (let i = 0; i < haystack.length; i++) {
+        //         if (needle == haystack[i]) {
+        //             itExists = true;
+        //             break;
+        //         }
+        //     }
+
+        //     return itExists;
+        // }
+
+
+
+
+
+        // SOLUTION 3 - JS includes
+
+        let answer = numbers.includes(n);
+        document.write(answer);
+    </script>
+</body>
+
+</html>
