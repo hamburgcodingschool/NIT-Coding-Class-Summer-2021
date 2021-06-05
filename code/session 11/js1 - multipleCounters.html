@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #counterWrapper {
+            width: 200px;
+            margin: 20px auto 0;
+        }
+
+        .counterText {
+            border: solid 2px red;
+            width: 96px;
+            height: 96px;
+            background-color: azure;
+            float: left;
+            text-align: center;
+            line-height: 96px;
+            border-radius: 20px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #radioWrapper {
+            background-color: burlywood;
+            width: 200px;
+            margin: 20px auto 0;
+        }
+
+        #buttonWrapper {
+            width: 200px;
+            margin: 20px auto 0;
+        }
+
+        #buttonWrapper>button {
+            width: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="counterWrapper">
+        <div class="counterText" id="counter1Text">0</div>
+        <div class="counterText" id="counter2Text">0</div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="radioWrapper">
+        <label>
+            <input type="radio" name="counterPicker" id="counter1Picker">Counter 1
+        </label>
+        <label>
+            <input type="radio" name="counterPicker" id="counter2Picker">Counter 2
+        </label>
+    </div>
+
+    <div id="buttonWrapper">
+        <button>- 10</button>
+        <button>- 1</button>
+        <button>+ 1</button>
+        <button>+ 10</button>
+    </div>
+
+    <script>
+        // STEP 1, Ignore the Radio, make it work for just the first counter
+        // STEP 2, figure out how to check which radiobutton is selected
+        // STEP 3, make the buttons affect the respective counter and counterText
+    </script>
+</body>
+
+</html>
