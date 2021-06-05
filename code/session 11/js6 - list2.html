@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tablePeople {
+            border-collapse: collapse;
+            border-spacing: 0;
+
+            width: 400px;
+
+            margin-bottom: 50px;
+        }
+
+        #tablePeople td,
+        #tablePeople th {
+            border: solid 1px black;
+        }
+
+        .formWrapper {
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Awesome List of People</h1>
+
+    <table id="tablePeople">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Joe</td>
+            <td>25</td>
+            <td>NY</td>
+        </tr>
+    </table>
+
+    <div class="formWrapper">
+        <label>
+            Name: <input type="text" id="inputName">
+        </label>
+    </div>
+    <div class="formWrapper">
+        <label>
+            Age: <input type="text" id="inputAge">
+        </label>
+    </div>
+    <div class="formWrapper">
+        <label>
+            City: <input type="text" id="inputCity">
+        </label>
+    </div>
+
+    <button id="buttonAdd">Add Person</button>
+
+    <script>
+        let people = [{
+                name: "Helder",
+                age: 40,
+                city: "Porto"
+            },
+            {
+                name: "John",
+                age: 30,
+                city: "London"
+            },
+            {
+                name: "Lydia",
+                age: 45,
+                city: "Paris"
+            },
+            {
+                name: "Martha",
+                age: 25,
+                city: "Berlin"
+            },
+            {
+                name: "Joey",
+                age: 10,
+                city: "Madrid"
+            },
+        ];
+
+        let tablePeople = document.getElementById("tablePeople");
+        let buttonAdd = document.getElementById("buttonAdd");
+
+        let inputName = document.getElementById("inputName");
+        let inputAge = document.getElementById("inputAge");
+        let inputCity = document.getElementById("inputCity");
+
+        function populateTable() {
+
+            tablePeople.innerHTML = `<tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>`;
+
+            for (let i = 0; i < people.length; i++) {
+                tablePeople.innerHTML += `<tr>
+                    <td>${people[i].name}</td>
+                    <td>${people[i].age}</td>
+                    <td>${people[i].city}</td>
+                </tr>`;
+            }
+        }
+
+        buttonAdd.addEventListener("click", function () {
+
+            let newPerson = {
+                name: inputName.value,
+                age: inputAge.value,
+                city: inputCity.value
+            };
+
+            people.push(newPerson);
+
+            populateTable();
+        });
+
+
+        populateTable();
+
+        // EXERCISE:
+        // Save the Array to LocalStorage...
+        // Read the Array from LocalStorage on pageload
+    </script>
+</body>
+
+</html>

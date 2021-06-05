@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tablePeople {
+            border-collapse: collapse;
+            border-spacing: 0;
+
+            width: 400px;
+
+            margin-bottom: 50px;
+        }
+
+        #tablePeople td,
+        #tablePeople th {
+            border: solid 1px black;
+        }
+
+        .formWrapper {
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Awesome List of People</h1>
+
+    <table id="tablePeople">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Joe</td>
+            <td>25</td>
+            <td>NY</td>
+        </tr>
+    </table>
+
+    <div class="formWrapper">
+        <label>
+            Name: <input type="text" id="inputName">
+        </label>
+    </div>
+    <div class="formWrapper">
+        <label>
+            Age: <input type="text" id="inputAge">
+        </label>
+    </div>
+    <div class="formWrapper">
+        <label>
+            City: <input type="text" id="inputCity">
+        </label>
+    </div>
+
+    <button id="buttonAdd">Add Person</button>
+
+    <script>
+        let tablePeople = document.getElementById("tablePeople");
+        let buttonAdd = document.getElementById("buttonAdd");
+
+        let inputName = document.getElementById("inputName");
+        let inputAge = document.getElementById("inputAge");
+        let inputCity = document.getElementById("inputCity");
+
+        buttonAdd.addEventListener("click", function () {
+
+            tablePeople.innerHTML += `<tr>
+                <td>${inputName.value}</td>
+                <td>${inputAge.value}</td>
+                <td>${inputCity.value}</td>
+            </tr>`;
+        });
+    </script>
+</body>
+
+</html>

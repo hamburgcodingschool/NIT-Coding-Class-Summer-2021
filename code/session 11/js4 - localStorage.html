@@ -10,14 +10,13 @@
 
 <body>
 
-    <input type="text">
+    <input type="text" id="inputBox">
     <br>
-    <button>Load</button>
-    <button>Save</button>
+    <button id="buttonLoad">Load</button>
+    <button id="buttonSave">Save</button>
 
     <script>
         // localStorage.setItem("SomeKey", "Some text that I really don't know what to write next...");
-
 
         // EXERCISE:
         // Use the Save button to read the text from the Input and save it to Local Storage
@@ -31,6 +30,18 @@
 
         // STEP 3:
         // read from the localstorage and write to input box when Load button is clicked
+
+        let inputBox = document.getElementById("inputBox");
+        let buttonLoad = document.getElementById("buttonLoad");
+        let buttonSave = document.getElementById("buttonSave");
+
+        buttonLoad.addEventListener("click", function () {
+            inputBox.value = localStorage.getItem("inputBoxValue");
+        });
+
+        buttonSave.addEventListener("click", function () {
+            localStorage.setItem("inputBoxValue", inputBox.value);
+        });
     </script>
 </body>
 
