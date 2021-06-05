@@ -55,6 +55,45 @@
         // The name of the youngest Person
         // The city of the oldest Person
         // average of all ages
+
+        // let sumAges = 0;
+        // let oldestIndex = 0;
+
+        // for (let i = 0; i < people.length; i++) {
+
+        //     sumAges += people[i].age;
+        //     if (people[i].age > people[oldestIndex].age) {
+        //         oldestIndex = i;
+        //     }
+
+        // }
+
+        // document.write(`Oldest: ${people[oldestIndex].city}<br>`);
+
+        let sumAges = 0;
+
+        let oldestPerson = people[0];
+        let youngestPerson = people[0];
+
+        for (let i = 0; i < people.length; i++) {
+
+            sumAges += people[i].age;
+
+            if (people[i].age > oldestPerson.age) {
+                oldestPerson = people[i];
+            }
+
+            if (people[i].age < youngestPerson.age) {
+                youngestPerson = people[i];
+            }
+        }
+
+
+        document.write(`Oldest: ${oldestPerson.name}, ${oldestPerson.age}, ${oldestPerson.city} <br>`);
+        document.write(`Youngest: ${youngestPerson.name}, ${youngestPerson.age}, ${youngestPerson.city} <br>`);
+
+        let averageAge = sumAges / people.length;
+        document.write(`Average age: ${averageAge}<br>`);
     </script>
 </body>
 
