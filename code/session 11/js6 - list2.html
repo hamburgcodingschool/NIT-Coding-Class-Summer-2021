@@ -124,9 +124,22 @@
             people.push(newPerson);
 
             populateTable();
+            saveToLocalStorage();
         });
 
+        function saveToLocalStorage() {
+            let jsonString = JSON.stringify(people);
+            localStorage.setItem("peopleDS", jsonString);
+        }
 
+        function loadFromLocalStorage() {
+            let jsonString = localStorage.getItem("peopleDS");
+            if (jsonString) {
+                people = JSON.parse(jsonString);
+            }
+        }
+
+        loadFromLocalStorage();
         populateTable();
 
         // EXERCISE:
