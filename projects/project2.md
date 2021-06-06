@@ -5,6 +5,8 @@
 The goal for this project is to build an index of Pokemon with HTML, CSS, and JS.
 You will be consuming content from an external `REST API` and optionally storing data in `localstorage`
 
+https://pokeapi.co
+
 ### Features
 #### A list of Pokemon
 - Show a list with the first 151 Pokemon
