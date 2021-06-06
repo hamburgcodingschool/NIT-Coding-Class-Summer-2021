@@ -22,12 +22,12 @@
 
         #textBox {
             border: solid 1px yellow;
-            width: 280px;
+            width: 450px;
             height: 280px;
 
             overflow: auto;
 
-            padding: 10px;
+            padding: 5px;
 
             color: azure;
         }
@@ -50,23 +50,37 @@
         fetchButton.addEventListener("click", function () {
 
             fetch("https://jsonplaceholder.typicode.com/users").then(function (response) {
-
                 console.log(response)
-
                 response.json().then(function (result) {
-                    // textBox.innerHTML = "done fetching users and parsing the JSON!"
-                    textBox.innerHTML = result[0].name;
                     console.log(result);
-                })
 
-            })
+                    updateBox(result);
+                });
+            });
 
             textBox.innerHTML = "loading...";
 
         });
 
-        textBox.innerHTML = "Page started";
+        function updateBox(users) {
+
+            let newContent = "<ul>";
+
+            for (let i = 0; i < users.length; i++) {
+                newContent += `<li>${users[i].name} &lt;${users[i].email}&gt;</li>`;
+            }
+
+            newContent += "</ul>";
+
+            textBox.innerHTML = newContent;
+        }
+
+        textBox.innerHTML = "Click the button to see some user data...";
+
+        // Instead os just showing the name of the first user
+        // create a list `ul` with the name and email of all 10 users
     </script>
+
 </body>
 
 </html>
